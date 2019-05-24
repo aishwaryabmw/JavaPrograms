@@ -1,0 +1,194 @@
+STACK (LIFO)
+    - void push(int v) // Add value to top
+    - void pop();      // Remove the top element
+    - int top();       // Give value on top, without removing
+    - bool empty();
+    - int size();  
+
+    UNDO REDO
+    BROWSER BACK BUTTON
+    HISTORY (of commands, websites surfed)
+    Function Calls
+    PostFix 
+
+QUEUE (FIFO)
+    - void push(int v)
+    - void pop()
+    - int front()
+    - bool empty()
+    - int size()
+
+
+    Applications
+        - CPU Scheduling
+
+
+
+STACK ---->  Go Back
+             Reversal
+
+
+
+QUEUE ----> BFS 
+            Shortest Length between Source and Destination
+            if ->> Graph is UNWEIGHTED
+
+No Essential : You have tree or Graph.
+
+               Implicit Graph or Tree in mind.
+
+
+        Implemented as LINKED LIST or VECTOR.
+
+        20 space.
+        Elasticity.
+
+
+
+
+
+bool isBalanced(string s)
+{
+    stack<char> 
+
+}
+
+
+
+
+<html>
+    <head></head>
+</html>
+
+
+
+
+queue<int> q;
+q.push(1);
+
+count = 0;
+while(!q.empty())
+{
+    int x = q.front();
+    q.pop();
+    if(count==n)
+        break;
+    printf(x);
+    count++;
+    q.push(x*10);
+    q.push(x*10+1);
+}
+
+
+APPROACH 1:
+    p[pi] = '0';
+    printPath(n, p, pi+1);
+    p[pi] = '1';
+    printPath(n, p, pi+1);
+
+APPROACH 2:
+    for(int i=0;i<=1;i++)
+    {
+        p[pi] = i +'0';
+        printPath(n, p, pi+1);
+    }
+
+
+p[pi] = s[si];
+
+for(int i=0;i<=1;i++)
+{
+   printPath(n, p, pi+1);
+}
+
+"234"
+
+map<char, string> mp;
+createMap()
+{
+    mp['2'] = "abc";
+    mp['3']= "def";
+}
+void printStringsH(string s, int si, char p[], int pi)
+{
+    string possibilities = mp[s[si]];
+    for()
+}
+
+void printStrings(string s)
+{
+    createMap();
+    char p[s.size()];
+    printStringsH(s, 0, p, 0);
+}
+
+
+
+
+
+
+
+1.  Missing Semicolon.
+2.  Braces - Identataion
+3.  Using variable without declaring it.
+
+
+
+
+
+
+
+
+
+
+
+map<int, vector<int> > mp;
+
+Dictionary<int, List<int> > mp; //C#
+
+HashMap<Integer, List<Integer> > mp; // JAVA
+
+HashMap<Integer, List<Integer> > gm;
+
+void printAllPathsH(int s, int d, int p[], int pi)
+{
+    p[pi] = s;
+    if(s==d)
+    {
+        // Print Path 0 to <=pi
+
+        return;
+    }
+
+    List<Integer> listS = gm[s];
+
+    for(int i=0;i<listS.size(); i++){
+        printAllPathsH(listS[i], d, p, pi+1);
+    } 
+}
+
+void printAllPaths(HashMap<Integer, List<Integer> > mp, int s, int d)
+{
+    int path[10000];
+    gm = mp;
+    printAllPathsH(s, d, path, 0);
+}
+
+
+
+int ch = 65;
+char c = (char)65; // Give compilation error  without typecasting
+if(ch !='A')
+{
+
+}
+
+
+atoi("4232");
+
+int ans = 0;
+
+
+for(int i=0;)
+int digit = str[i] - '0';  // ASCII('4') - ASCII('0')
+ans = ans*10 + digit;

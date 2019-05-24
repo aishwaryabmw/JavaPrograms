@@ -1,0 +1,367 @@
+C++
+
+struct NaryTreeNode
+{
+
+    int data;
+    list<NaryTreeNode*> children; 
+}
+
+struct BTNode
+{
+    int data;
+    BTNode* left;   //left of the child
+    *rightSibling; //right sibling at the same level
+
+}
+
+
+
+#define MAXCHILDREN 5
+struct NaryTreeNode
+{
+
+    int data;
+    NaryTreeNode* children[MAXCHILDREN]; //Leaves will have more bytes of wastage
+
+}
+
+
+
+
+
+
+
+//Operations in a binary tree
+//Function signatures
+BTNode* insert(BTNode* root,int data)
+{
+    if(root is null)
+        create a node and return it
+    else
+    //compre root.data and data
+    //if root's data < data 
+        root->right = insert(root->right,data); //insert in the right tree
+    //if root's data > data 
+     root.left =   // insert in the left tree 
+
+
+}
+
+
+
+
+
+bool search(BTNode* root,int data)
+{
+    //if root is null , return false;
+    if root.data == data return true;
+    if root.data > data
+       return search(root->left,data);
+    if root.data < data
+        return search(root->right,data);
+
+}
+
+
+
+BTNode* search(BTNode* root,int data)
+{
+    //if root is null , return NULL;
+    if root.data == data return root;
+    if root.data > data
+       return search(root->left,data);
+    if root.data < data
+        return search(root->right,data);
+        
+}
+
+
+
+BINARY TREE AND BINARY SEARCH TREE
+BINARY TREE: At max two children for every node
+             NO ordering in bw nodes
+
+BINARY SEARCH TREE:
+            All the values to the left of root will be less/smaller than the root
+            All the values to the right of root will be greater than or equal the root.
+    
+
+
+int main()
+{
+
+    return 0;
+}
+
+
+  	// CREATE A NODE
+  	// INSERT INTO TREE
+  	// RETURN THE ROOT OF THE TREE THAT IS BUILT AFTER INSERTION
+	BSTNode insertBSTNode(BSTNode root, int data) {
+    }
+
+
+    
+    public BSTNode searchNode(BSTNode root, int d) { 
+        if(root==null || root.data == d){ 
+            return root; 
+        } 
+        else if(root.data > d){ 
+            return searchNode(root.left, d); 
+        } 
+        else{ 
+            return searchNode(root.right, d); 
+        } 
+    } 
+        
+
+    POST ---  VISIT CURRENT NODE IN END
+
+
+    LR ---> GIVEN ORDER 
+
+    RL ---> REVERSE ORDER 
+
+
+
+        LVR --> INORDER
+        LRV --> POST
+        VLR --> PRE
+        RVL --> Reverse INORDER
+        RLV --> Reverse POST
+        VRL --> Reverse PRE
+
+        LEVEL ORDER TRAVERSAL.
+
+
+
+
+
+
+
+
+
+
+int f(int* a)
+{
+
+}
+
+
+int main()
+{
+
+    int b = 10;
+    f(&b); //reference
+    int* a;
+    f(a);
+}
+
+
+
+
+
+Shortest
+
+
+
+
+
+JUMPING NUMBERS
+
+    - Single Digit Numbers are Jumping Numbers.
+
+     Given N, print all jumping numbes <= N
+
+     N = 2000
+
+
+    0 1 2 3 4 5 6 7 8 9 10 12 21 23 32 34 43 45 54 56 65 67 
+    101 121 123 210 212
+
+
+Queue : Ordering is important and we can find a 
+        correlation from One STATE to other states.
+
+Min Distance in Unweighed Graph....
+
+
+
+
+Optimized BACKTRACKING
+
+    - path Printing
+    - boolean answer.
+    - count, max, min .....
+
+
+    1 2 3 4 5
+    2 3 4 5 6
+    6 4 2 8 9 
+    0 1 4 2 7
+
+
+    Given Sum S, and a Matrix.
+    Tell if we have any path from 0,0 to R-1,C-1 having this sum.
+    We are allowed to move RIGHT or DOWN from any given cell.
+
+    Given a matrix, give the max sum possible on any path.
+
+
+    bool hasPathWithSum(int m[][], int i, int j, int sum)
+    {
+        if(out_of_bounds)
+            return false;
+        if(i==R-1 && j==C-1)
+            return m[i][j]==sum;
+        return hasPathWithSum(m, i, j+1, sum-m[i][j]) || hasPathWithSum(m, i+1, j, sum-m[i][j]);
+    }
+    bool hasPathWithSum(int m[][], int sum)
+    {
+        
+    }
+
+
+
+
+    a[] = 23 11 0 98
+
+    SUM = 43
+
+    int a[];
+    int n;
+    int sum;
+
+
+    map<MyClass, int> mp;
+    bool hasSumH(int idx, int sum)
+    {
+        if(idx >= n)
+            return false;
+
+        if(sum<0)
+            return false;
+
+        if(a[idx]==sum)
+            return true;
+
+        if(mp.containsKey(myobj))
+            return mp.get(myobj);
+
+            
+        if(mp.find(MyClass(idx,sum))!=mp.end())
+            return mp[MyClass(idx,sum)];
+
+        // Setting the value
+        mp.put(myObj, true);
+
+        return mp[MyClass(idx,sum)])  =hasSumH(idx+1, sum-a[idx]) || hasSumH(idx+1, sum);
+    }
+
+
+
+
+    HAS SUM
+        
+
+
+
+
+
+
+
+
+
+
+
+// 0 1 1 2 3 5 8 ....
+
+int fib(int n)
+{
+    if(n<=1)
+        return n;
+    return fib(n-1)+fib(n-2);
+}
+
+int dp[10000]; // Take DP array of dim params
+
+// Init it with all -1
+// Before returning just store the ans
+// If ans is already there, return that
+
+int fib(int n)
+{
+    if(n<=1)
+        return n;
+    if(dp[n]!=-1)
+        return dp[n];
+    return dp[n] = fib(n-1)+fib(n-2);
+}
+
+
+
+
+
+Sub Problem with is Required more than once.
+
+
+
+CACHING....
+
+
+    - Optimal Substructure
+    - Overlapping Subproblems
+
+
+
+
+
+Those who don't remember the past, are
+codemned to repeat it.
+
+
+
+
+
+
+int maxCost(int[,] a)
+
+int[,] a = new int[R,C];
+
+
+
+
+Max Path cost from i, j to R-1, C-1
+
+MAXCOST(i, j)  = A[i][j] + MAX( MAXCOST(i+1, j), MAXCOST(i, j+1))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

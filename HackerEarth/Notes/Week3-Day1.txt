@@ -1,0 +1,228 @@
+
+Binary Number System
+
+Bitwise operators
+=================
+& AND
+| OR
+^ XOR
+~ NOT
+
+<< LEFT Shift
+>> RIGHT Shift
+>>> JAVA --->0
+
+
+int a = -10;
+int b = a << 1;   // multiply by 2
+
+int c = a >> 1;   // divide by 2 
+
+-ve numbers
+2's complement
+-1		11111111...
+		
+int a = 10;
+Check last bit	if((a&1) == 0)	kth bit		if((a&(1<<k)) == 0)
+
+Set last bit    a = a | 1       			a = a | (1<<k)
+
+Reset last bit  a = a & (~1)    			a = a & (~(1<<k))
+
+Flip last bit   a = a ^ 1       			a = a ^ (1 << k)
+	  
+	  
+	Count no. of set bits in an integer
+	===================================
+	
+	int countSetBits(int n)          n = 3  ans = 2
+	{
+		int c = 0;
+		while(n!=0){
+			if(n&1 == 1)  // check last bit
+				c++;
+			n = n >> 1;   // right shift
+	}
+	This approach fails for -ve numbers.
+	
+	
+	Power of 2   n = 4    n = 12
+	
+	bool isPowerOf2(int n){		
+		
+	}
+	Approach 1: calculate log base 2 and check if it contains fractional part or not
+	Approach 2: keep dividig by 2 and keep checking number never becomes odd before hitting 1.
+	
+	O(1)  
+	1   =   0001
+	2   =   0010
+	
+	3   =   0011
+	4   =   0100
+	
+	7   =   0111
+	8   =   1000
+	
+	15  =   01111
+	16  =   10000
+	
+	Approach 3: using bitwise operators
+	if(n==0)
+		return false;
+	if(n & (n-1)   ==  0)
+		return true;
+	return false;
+	
+	
+	
+	n&(n-1)   --> reset(make 0) rightmost set bit
+	
+	
+	Another approach for counting set bits
+	int c=0;
+	while(n!=0){
+		c++;
+		n = n&(n-1);
+	}
+	
+All no. appear in pair except 2 nos. find them.
+	
+^{ 1, 2, 1, 2, 9, 9, 3, 4}  == 3^4	
+
+{ 1, 2, 3, 3, 5}  1..5
+
+
+
+// swap without temp var
+int a = 5;
+int b = 7;
+
+a = a^b;
+b = a^b;
+a = a^b;
+
+================================================================================
+Kth largest
+method 1
+=====
+
+sort the array
+get the kth index
+
+T.C == O(nlogn)
+S.C == O(1)
+
+method 2
+==========
+
+build a max heap
+extract k-1 elements from the heap
+now the top element gives me kth largest element 
+
+O(n+klogN)
+S.C : O(logN)
+method 3
+=========
+
+k larger elements from given n elements 
+min of all those k elements give me kth largest number in the array
+
+build a min heap with k elements
+remaining (n-k) check with the min and if it's
+greater, remove the min and insert the new element.
+
+extract the top element from min heap
+
+O(k+(n-k)*logK)
+S.C : O(k+logK)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	  
+	  
+	  
+
+
+
+
+
+
+
+
+
+
+
+
+

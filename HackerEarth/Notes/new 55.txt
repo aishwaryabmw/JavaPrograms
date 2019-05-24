@@ -1,0 +1,154 @@
+import java.util.*;
+class BeingZero
+{
+  	Scanner sc= new Scanner(System.in);
+  
+  	HashMap<Integer, String> hm = new HashMap<>();
+  	hm.put(2,"abc");
+    hm.put(3,"def");
+    hm.put(4,"ghi");
+    hm.put(5,"jkl");
+    hm.put(6,"mno");
+    hm.put(7,"pqrs");
+    hm.put(8,"tuv");
+    hm.put(9,"wxyz");
+  
+  	String s=sc.next();	
+    char str[]=s.toCharArray();
+	List<String> genAllLetterSequences(String digitSeq)
+	{
+		
+	}
+}
+
+
+List<String> ans;
+List<String> genBinaryNumbers(int nBits){
+    // Creating new for every test case
+   List<String> ans = new ArrayList<String>();
+   char p[]=new char[2^nBits];
+   // TODO:  Write Helper and add to ans rather than printing
+    ans=genBinaryNumbersHelper(nBits,p,0);
+   return ans;
+}
+List<String> genBinaryNumbers(int n,char path[],int idx)
+{
+  
+  if(n==0)
+    return;
+  
+  for(int i=0;i<=pi;i++)
+    System.out.print(path[i]+" ");
+  
+  for(i=0;i<=1;i++)
+  {
+    path[idx]=(char)i+'0';
+  	genBinaryNumbers(n-1,path,idx+1);
+  }
+}
+
+
+
+Given a C program identify if its recursive-topological sort
+--comments in string-test case
+
+n&1==0 for odd/even without %
+
+sort array-void sortArray(int arr[], int si,int ei)
+
+returning list-List in java, vector in c++
+
+Recursion:
+	Div & con
+	Backtracking
+	DP
+	Trees
+	Graphs
+
+best operation in array: o(1) ->o(logN)
+
+map and set-use where arrays cannot be used
+
+MAP-doesnt guarantee order
+ -check if given key is der or not-o(1) or 0(logN)
+ -set
+ -get
+ 
+SET-
+	-add -O(1) oro(logN)
+	-check a value der or not-o
+	
+binary search can be applied to unsorted list- find count of all zeros lying on left side of array ex: 0 0 0 0 1 2 3 -9 8 768 9 8 6
+	
+10^8 is max limit for no of operations
+
+*sorting is a way to optimize solutions
+
+recursion has an overhead of stack space
+DAY2:
+use modulo for circular array
+reverse helps in rotation probs
+i+k%n - for rotation by k
+
+mat.length=rows
+mat[0].length=columns
+
+-----rotate an array k spaces left or right
+----juggling algo
+
+
+
+full binary tree:array
+left child:2*i +1
+right:2*i+2
+
+full ternary tree:array
+left child:3*i +1
+middle child:3*i +2
+right:3*i+3
+
+
+complete search/backtracking-path printing-backtracking use case is more than one option 
+---print all binary numbers of length n
+---ceo to IC path
+---generate all patterns of L n G sitting
+consider global array
+
+/*void pprintALlPaths(int a[],int n,int ind)
+{
+	if leaf node
+		print path
+	//fill
+
+}*/
+
+
+
+runtime memory-heap area is used for like new objects in java malloc in c
+
+DAY-3
+
+real time examples of diff data structures
+
+fb uses BFS for mutual friends
+
+
+Stack---go back,reversal use cases
+
+queue----BFS, shortest length bw source n dest if graph is unweighted
+
+DFS slower than BFS
+
+implicit graph or tree during interview
+
+Prog:is string balanced-braces,brackets app:html file,json file-STACK
+QUEUE:
+
+
+generate octal of 8 bits
+
+
+key press,generate vaid parenthesis
+node print,edge print
+
+pre,post,level using iteration

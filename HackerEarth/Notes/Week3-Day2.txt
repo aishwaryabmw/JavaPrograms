@@ -1,0 +1,95 @@
+INPUT
+=========================
+8
+gangadhar abhishek
+abhishek vipllav
+suneela aishwarya
+abhishek tirtha
+abhishek arjun
+khader abhineel
+mohan vineel
+ashutosh vineel
+=========================
+
+import java.util.*;
+class MyGraph
+{
+	Map<String, Integer> nameToIdx;
+	Map<Integer, String> idxToName;
+	List< List<Integer> > g;
+	int indices = 0;
+	
+	MyGraph(int nv)
+	{
+		nameToIdx = new HashMap<>();
+		idxToName = new HashMap<>();
+		g = new ArrayList<>();
+		for(int i=0;i<nv;i++)
+			g.add(new ArrayList<Integer>());
+	}
+	
+	bool areFriendsOfFriends(int n1, int n2){
+			
+	}	
+	
+	void insertEdge(int u, int v)
+	{
+		g.get(u).add(v);
+		g.get(v).add(u);
+	}
+	void insertEdge(String n1, String n2)
+	{
+		if(!nameToIdx.containsKey(n1)){
+			nameToIdx.put(n1, indices);
+			idxToName.put(indices, n1);
+			indices++;
+		}
+		int n1Idx = nameToIdx.get(n1);
+		
+		if(!nameToIdx.containsKey(n2)){
+			nameToIdx.put(n2, indices);
+			idxToName.put(indices, n2);
+			indices++;
+		}
+		int n2Idx = nameToIdx.get(n2);
+		System.out.printf("INSERT EDGE between %s(%d) and %s(%d)\n", n1, n1Idx, n2, n2Idx);
+		insertEdge(n1Idx, n2Idx);
+	}
+	
+	void printGraph()
+	{
+		for(int i=0;i<idxToName.size();i++)
+		{
+			System.out.printf("%s : ", idxToName.get(i));
+			List<Integer> friendsOfI = g.get(i);
+			for(int friendIdx : friendsOfI)
+				System.out.printf("%s ", idxToName.get(friendIdx));
+			System.out.println();
+		}
+	}
+}
+
+public class BeingZeroGraph
+{
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		int ne = sc.nextInt();
+		sc.nextLine(); // Discard newline after ne
+		String n1, n2;
+		
+		// Reprsent Graph
+		// Map<String, List<String> > g;
+		
+		MyGraph g = new MyGraph(200);
+		
+		for(int i=0;i<ne;i++)
+		{
+			String inp[] = sc.nextLine().split(" ");
+			n1 = inp[0];
+			n2 = inp[1];
+			//System.out.printf("INSERT EDGE BETWEEN %s and %s\n", n1, n2);
+			g.insertEdge(n1, n2);
+		}
+		g.printGraph();
+	}
+}
